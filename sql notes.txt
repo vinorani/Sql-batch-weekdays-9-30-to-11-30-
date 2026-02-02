@@ -1,0 +1,181 @@
+sql server Data Type
+
+char(n)   	It is a fixed width character string data type. Its size can be up to 8000 characters.
+varchar(n)	It is a variable width character string data type. Its size can be up to 8000 characters.
+varchar(max)	It is a variable width character string data types. Its size can be up to 1,073,741,824 characters.
+text	        It is a variable width character string data type. Its size can be up to 2GB of text data.
+nchar	        It is a fixed width Unicode string data type. Its size can be up to 4000 characters.
+nvarchar	It is a variable width Unicode string data type. Its size can be up to 4000 characters.
+ntext	        It is a variable width Unicode string data type. Its size can be up to 2GB of text data.
+binary(n)	It is a fixed width Binary string data type. Its size can be up to 8000 bytes.
+varbinary	It is a variable width Binary string data type. Its size can be up to 8000 bytes.
+image		It is also a variable width Binary string data type. Its size can be up to 2GB.
+bit		It is an integer that can be 0, 1 or null.
+tinyint		It allows whole numbers from 0 to 255.
+Smallint	It allows whole numbers between -32,768 and 32,767.
+Int		It allows whole numbers between -2,147,483,648 and 2,147,483,647.
+bigint		It allows whole numbers between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807.
+datetime	It is used to specify date and time combination. accuracy of 3.33 milliseconds.
+datetime2	It is used to specify date and time combination.accuracy of 100 nanoseconds
+
+oracle server
+
+CHAR(size)	It is used to store character data within the predefined length. It can be stored up to 2000 bytes.
+NCHAR(size)	It is used to store national character data within the predefined length. It can be stored up to 2000 bytes.
+VARCHAR2(size)	It is used to store variable string data within the predefined length. It can be stored up to 4000 byte.
+VARCHAR(SIZE)	It is the same as VARCHAR2(size). You can also use VARCHAR(size), but it is suggested to use VARCHAR2(size)
+VARCHAR2(size)	It is used to store Unicode string data within the predefined length. We have to must specify the size of VARCHAR2 data type. It can be stored up to 4000 bytes.
+NUMBER(p, s)	It contains precision p and scale s. The precision p can range from 1 to 38, and the scale s can range from -84 to 127.
+FLOAT(p)	It is a subtype of the NUMBER data type. The precision p can range from 1 to 126.
+BINARY_FLOAT	It is used for binary precision( 32-bit). It requires 5 bytes, including length byte.
+BINARY_DOUBLE	It is used for double binary precision (64-bit). It requires 9 bytes, including length byte.
+DATE		It is used to store a valid date-time format with a fixed length. Its range varies from January 1, 4712 BC to December 31, 9999 AD.
+TIMESTAMP	It is used to store the valid date in YYYY-MM-DD with time hh:mm:ss format.
+BLOB		It is used to specify unstructured binary data. Its range goes up to 232-1 bytes or 4 GB.
+BFILE		It is used to store binary data in an external file. Its range goes up to 232-1 bytes or 4 GB.
+CLOB		It is used for single-byte character data. Its range goes up to 232-1 bytes or 4 GB.
+NCLOB		It is used to specify single byte or fixed length multibyte national character set (NCHAR) data. Its range is up to 232-1 bytes or 4 GB.
+RAW(size)	It is used to specify variable length raw binary data. Its range is up to 2000 bytes per row. Its maximum size must be specified.
+LONG RAW	It is used to specify variable length raw binary data. Its range up to 231-1 bytes or 2 GB, per row.
+
+binary(n)	It’s fixed-length binary data and we can store maximum 8000 bytes	Based on the defined size
+varbinary	It’s variable-length binary data and we can store maximum 8000 bytes	Based on number of bytes
+varbinary(max)	It’s a variable-length character string and we can store maximum 2GB data	Based on the number of bytes
+
+
+cursor		It is used to store a reference to cursor object
+XML		It is used to store XML formatted data and we can store maximum 2GB data
+table		It is used to store table result set for processing at a later time
+uniqueidentifier	It is used to store globally unique identifier (GUID)
+sql_variant	It is used to store values of various sql supported data types except text,ntext, varchar(max), xml, etc… We can store a maximum of 8000 bytes
+
+
+
+
+key words
+
+
+Keyword	Description:
+
+ADD			Adds a column in an existing table
+ADD CONSTRAINT		Adds a constraint after a table is already created
+ALL			Returns true if all of the subquery values meet the condition
+ALTER			Adds, deletes, or modifies columns in a table, or changes the data type of a column in a table
+ALTER COLUMN		Changes the data type of a column in a table
+ALTER TABLE		Adds, deletes, or modifies columns in a table
+AND			Only includes rows where both conditions is true
+ANY			Returns true if any of the subquery values meet the condition
+AS			Renames a column or table with an alias
+ASC			Sorts the result set in ascending order
+BACKUP DATABASE		Creates a back up of an existing database
+BETWEEN			Selects values within a given range
+CHECK			A constraint that limits the value that can be placed in a column
+COLUMN			Changes the data type of a column or deletes a column in a table
+CONSTRAINT		Adds or deletes a constraint
+CREATE			Creates a database, index, view, table, or procedure
+CREATE DATABASE		Creates a new SQL database
+CREATE OR REPLACE VIEW	Updates a view
+CREATE TABLE		Creates a new table in the database
+CREATE VIEW		Creates a view based on the result set of a SELECT statement
+DATABASE		Creates or deletes an SQL database
+DEFAULT			A constraint that provides a default value for a column
+DELETE			Deletes rows from a table
+DESC			Sorts the result set in descending order
+DISTINCT		Selects only distinct (different) values
+DROP			Deletes a column, constraint, database, index, table, or view
+DROP COLUMN		Deletes a column in a table
+DROP CONSTRAINT		Deletes a UNIQUE, PRIMARY KEY, FOREIGN KEY, or CHECK constraint
+DROP DATABASE		Deletes an existing SQL database
+DROP DEFAULT		Deletes a DEFAULT constraint
+DROP INDEX		Deletes an index in a table
+DROP TABLE		Deletes an existing table in the database
+DROP VIEW		Deletes a view
+EXEC			Executes a stored procedure
+EXISTS			Tests for the existence of any record in a subquery
+FOREIGN KEY		A constraint that is a key used to link two tables together
+FROM			Specifies which table to select or delete data from
+FULL OUTER JOIN		Returns all rows when there is a match in either left table or right table
+GROUP BY		Groups the result set (used with aggregate functions: COUNT, MAX, MIN, SUM, AVG)
+HAVING			Used instead of WHERE with aggregate functions
+IN			Allows you to specify multiple values in a WHERE clause
+INDEX			Creates or deletes an index in a table
+INNER JOIN		Returns rows that have matching values in both tables
+INSERT INTO		Inserts new rows in a table
+INSERT INTO SELECT	Copies data from one table into another table
+IS NULL			Tests for empty values
+IS NOT NULL		Tests for non-empty values
+JOIN			Joins tables
+LEFT JOIN		Returns all rows from the left table, and the matching rows from the right table
+LIKE			Searches for a specified pattern in a column
+LIMIT			Specifies the number of records to return in the result set
+NOT			Only includes rows where a condition is not true
+NOT NULL		A constraint that enforces a column to not accept NULL values
+OR			Includes rows where either condition is true
+ORDER BY		Sorts the result set in ascending or descending order
+OUTER JOIN		Returns all rows when there is a match in either left table or right table
+PRIMARY KEY		A constraint that uniquely identifies each record in a database table
+PROCEDURE		A stored procedure
+RIGHT JOIN		Returns all rows from the right table, and the matching rows from the left table
+ROWNUM			Specifies the number of records to return in the result set
+SELECT			Selects data from a database
+SELECT DISTINCT		Selects only distinct (different) values
+SELECT INTO		Copies data from one table into a new table
+SELECT TOP		Specifies the number of records to return in the result set
+SET			Specifies which columns and values that should be updated in a table
+TABLE			Creates a table, or adds, deletes, or modifies columns in a table, or deletes a table or data inside a table
+TOP			Specifies the number of records to return in the result set
+TRUNCATE		TABLE	Deletes the data inside a table, but not the table itself
+UNION			Combines the result set of two or more SELECT statements (only distinct values)
+UNION ALL		Combines the result set of two or more SELECT statements (allows duplicate values)
+UNIQUE			A constraint that ensures that all values in a column are unique
+UPDATE			Updates existing rows in a table
+VALUES			Specifies the values of an INSERT INTO statement
+VIEW			Creates, updates, or deletes a view
+WHERE	
+		Filters a result set to include only records that fulfill a specified condition
+
+
+
+Single Line Comments
+Single line comments start with --
+Multi-line Comments
+Multi-line comments start with /* and end with */
+
+
+operators
+
+1.arithmetic operators(+,-,*,/,%)
+2.comparision operators(=,!=,<,>,<=,>=)
+3.concatenaton operators(||)
+	used to join string by using concatenation operators we can join morethan 2 string
+
+4.set operators
+	union(data type and column must be same,its eleminate the duplicates values,add two tables)
+	union all(data type and column must be same,its not eleminate the duplicates values,add two tables)
+	interset(data type and column must be same,its not eleminate the duplicates values,insert value of two tables)
+	minus(display the rows which are presented in the first query by absent in second query,no duplicates,default arranged in ascending)
+5.logical operators
+	add(multiple  where condition,all must true)
+	or(multiple  where condition,either true or false)
+	not(should not)
+6.special opearators
+	in(column in (v1,v2...))
+	not in(column not in (v1,v2...))
+	is(column is null))
+	is not(column is not null)
+	between(column between lowerrange and higer range)
+	not between(column not between lowerrange and higer range)
+	like(retrive the patterns matching .we percentile(%),underscore(_))
+	not like(retri ve the patterns matching .we percentile(%),underscore(_))
+
+7.sub query operators
+
+	all
+	any
+	exists
+	not exists
+
+8.bitwise operators
+	Bitwise AND (&)
+	Bitwise OR(|)
+	
